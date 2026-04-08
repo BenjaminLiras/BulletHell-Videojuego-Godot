@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	
 	var direccion = 0
-	if velocity.x == 0:
+	if velocity.x == 0 and velocity.y == 0:
 		animated_sprite_2d.play("idle")
 		
 	if Input.is_action_pressed("ui_right"):
@@ -40,9 +40,11 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed("ui_up"):
 		direction_y += 1
+		animated_sprite_2d.play("walk_right")
 	
 	if Input.is_action_pressed("ui_down"):
 		direction_y -= 1
+		animated_sprite_2d.play("walk_right")
 	
 
 
