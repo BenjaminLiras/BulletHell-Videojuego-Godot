@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d1yd2wfv4il2n"]
+
+[ext_resource type="Script" uid="uid://yblh3lftx1xi" path="res://Scripts/bullets.gd" id="1_xjght"]
+[ext_resource type="Texture2D" uid="uid://bp0vw040l4we0" path="res://Assets/Sprites - Lasers Bullets #1 [66]v2.5/Laser Sprites/19.png" id="2_oduel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycag2"]
+size = Vector2(38, 6)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1388366871]
+script = ExtResource("1_xjght")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2137264585]
+position = Vector2(-1.9073486e-06, -1.9073486e-06)
+scale = Vector2(0.23790714, 0.23415492)
+texture = ExtResource("2_oduel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19020800]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_ycag2")
