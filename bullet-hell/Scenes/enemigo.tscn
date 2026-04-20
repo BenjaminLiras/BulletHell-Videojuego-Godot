@@ -63,6 +63,38 @@ region = Rect2(384, 192, 64, 64)
 atlas = ExtResource("3_6hm1l")
 region = Rect2(448, 192, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwwci"]
+atlas = ExtResource("3_6hm1l")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4rf8"]
+atlas = ExtResource("3_6hm1l")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txn3v"]
+atlas = ExtResource("3_6hm1l")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0wvv"]
+atlas = ExtResource("3_6hm1l")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt143"]
+atlas = ExtResource("3_6hm1l")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqjfn"]
+atlas = ExtResource("3_6hm1l")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrqrd"]
+atlas = ExtResource("3_6hm1l")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2hvq"]
+atlas = ExtResource("3_6hm1l")
+region = Rect2(448, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_75jbx"]
 animations = [{
 "frames": [{
@@ -116,6 +148,35 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwwci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4rf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txn3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt143")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqjfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrqrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2hvq")
+}],
+"loop": true,
+"name": &"walk_top",
+"speed": 9.0
 }]
 
 [node name="enemigo" type="CharacterBody2D" unique_id=1063411300]
@@ -131,5 +192,5 @@ shape = SubResource("RectangleShape2D_y42jf")
 position = Vector2(0, -1.9073486e-06)
 scale = Vector2(1.625, 1.625)
 sprite_frames = SubResource("SpriteFrames_75jbx")
-animation = &"idle"
-frame_progress = 0.9067246
+animation = &"walk_top"
+frame_progress = 0.99783295

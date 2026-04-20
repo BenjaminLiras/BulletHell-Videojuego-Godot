@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @export var jogador: Node2D
 
-const SPEED = 150
+const SPEED = 25
 
 func _ready():
 	jogador = get_node("/root/Node2D/jugador")
@@ -12,8 +12,8 @@ func _physics_process(delta: float) -> void:
 	
 	if direccion.x < 0:
 		$AnimatedSprite2D.play("walk")
-		$AnimatedSprite2D.flip_h = true
+		$AnimatedSprite2D.flip_h = false
 	elif direccion.x > 0:
 		$AnimatedSprite2D.play("walk")
-		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.flip_h = true
 	move_and_slide()
