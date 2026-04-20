@@ -223,13 +223,14 @@ height = 54.0
 [node name="Node2D" type="Node2D" unique_id=2037753932]
 
 [node name="jogador" type="CharacterBody2D" parent="." unique_id=650396612]
+collision_mask = 4
 motion_mode = 1
 script = ExtResource("1_w43nc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jogador" unique_id=181685883]
 scale = Vector2(2.1106772, 2.1106772)
 sprite_frames = SubResource("SpriteFrames_tw2ln")
-animation = &"dash"
+animation = &"atack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="jogador" unique_id=944940926]
 shape = SubResource("CapsuleShape2D_j88hc")
@@ -237,5 +238,4 @@ shape = SubResource("CapsuleShape2D_j88hc")
 [node name="Camera2D" type="Camera2D" parent="jogador" unique_id=1945307018]
 
 [node name="poder" type="Node2D" parent="jogador" unique_id=824446657]
-position = Vector2(38, 0)
 script = ExtResource("3_4mg0t")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://6plka0i3mjhe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_it4s3"]
+
+[node name="enemigoMago" type="CharacterBody2D" unique_id=1719414700]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1622833996]
+sprite_frames = SubResource("SpriteFrames_it4s3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151958636]

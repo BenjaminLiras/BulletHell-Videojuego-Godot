@@ -1035,6 +1035,8 @@ texture = ExtResource("1_8pptk")
 31:31/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_snmdh"]
+physics_layer_0/collision_layer = 8
+physics_layer_0/collision_mask = 5
 sources/1 = SubResource("TileSetAtlasSource_khvlp")
 pattern_0 = SubResource("TileMapPattern_w7gao")
 
@@ -1049,5 +1051,5 @@ tile_set = SubResource("TileSet_snmdh")
 [node name="enemigo" parent="." unique_id=1063411300 instance=ExtResource("3_khvlp")]
 position = Vector2(130, 144)
 
-[node name="Node2D" parent="." unique_id=2037753932 instance=ExtResource("2_w7gao")]
+[node name="jugador" parent="." unique_id=2037753932 instance=ExtResource("2_w7gao")]
 position = Vector2(581, 414)

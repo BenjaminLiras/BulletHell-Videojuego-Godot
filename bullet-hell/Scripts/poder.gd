@@ -1,4 +1,5 @@
 extends Node2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../AnimatedSprite2D"
 
 var bullet_path = preload("res://Scenes/bullet.tscn")
 
