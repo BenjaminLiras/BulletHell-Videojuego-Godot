@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://6plka0i3mjhe"]
 
-[ext_resource type="Script" uid="uid://lmsyf36hn65" path="res://Scripts/enemigo_mago.gd" id="1_vaeta"]
+[ext_resource type="Script" path="res://Scripts/enemigo_mago.gd" id="1_vaeta"]
 [ext_resource type="Texture2D" uid="uid://cs1fjieshelh0" path="res://Assets/MagoVillano/wizardDeath.png" id="2_p7o3o"]
 [ext_resource type="Texture2D" uid="uid://uvs7cl7lx8o1" path="res://Assets/MagoVillano/wizard idle.png" id="2_vaeta"]
 [ext_resource type="Texture2D" uid="uid://c14cmosjda2wt" path="res://Assets/MagoVillano/wizardWalk.png" id="4_fx1dy"]
+[ext_resource type="Script" uid="uid://dyga141a6n3au" path="res://Scripts/poder_enemigo.gd" id="5_fx1dy"]
+[ext_resource type="Script" uid="uid://mwaxbqs3q4ay" path="res://Scripts/poder_ene_arriba.gd" id="6_e6u3v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b1hdw"]
 atlas = ExtResource("2_p7o3o")
@@ -208,7 +210,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vaeta"]
 size = Vector2(77, 88)
 
-[node name="enemigoMago" type="CharacterBody2D" unique_id=1719414700]
+[node name="enemigoMagoRojo" type="CharacterBody2D" unique_id=1719414700]
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_vaeta")
@@ -216,8 +218,17 @@ script = ExtResource("1_vaeta")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1622833996]
 sprite_frames = SubResource("SpriteFrames_it4s3")
 animation = &"walk"
-frame_progress = 0.49207518
+frame = 1
+frame_progress = 0.9825058
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151958636]
 position = Vector2(-1.5, -6)
 shape = SubResource("RectangleShape2D_vaeta")
+
+[node name="poderEnemigo" type="Node2D" parent="." unique_id=1663709062]
+position = Vector2(53, -1)
+script = ExtResource("5_fx1dy")
+
+[node name="poderEneArriba" type="Node2D" parent="." unique_id=1599636025]
+position = Vector2(0, -74)
+script = ExtResource("6_e6u3v")

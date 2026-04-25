@@ -17,10 +17,8 @@ func fire():
 		bullet.rota = global_rotation
 		get_parent().add_child(bullet)
 		sePuedeDisparar = false
-		print("empezo   timer")
 		await get_parent().get_tree().create_timer(0.3).timeout
 		sePuedeDisparar = true   
-		print("termino timer")
 
 
 func _ready() -> void:
