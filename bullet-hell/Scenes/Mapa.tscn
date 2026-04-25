@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cr7ripr5y74aq" path="res://Scenes/jogador.tscn" id="2_w7gao"]
 [ext_resource type="PackedScene" uid="uid://dbbjic3ayev7a" path="res://Scenes/enemigo.tscn" id="3_khvlp"]
 [ext_resource type="PackedScene" uid="uid://6plka0i3mjhe" path="res://Scenes/enemigo_mago.tscn" id="4_snmdh"]
+[ext_resource type="PackedScene" uid="uid://dydxcgg7cihlp" path="res://Scenes/corazones.tscn" id="5_1jxek"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_w7gao"]
 tile_data = PackedInt32Array(0, 720897, 23, 65536, 720897, 24, 131072, 720897, 25, 196608, 720897, 26, 262144, 720897, 27, 327680, 720897, 28, 393216, 720897, 29)
@@ -1057,3 +1058,7 @@ position = Vector2(581, 414)
 
 [node name="enemigoMago" parent="." unique_id=1719414700 instance=ExtResource("4_snmdh")]
 position = Vector2(875, 197)
+
+[node name="UI" parent="." unique_id=103973160 instance=ExtResource("5_1jxek")]
+offset = Vector2(25, 40)
+transform = Transform2D(1, 0, 0, 1, 25, 40)

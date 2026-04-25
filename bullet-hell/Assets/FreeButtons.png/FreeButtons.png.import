@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbf2580ftwy1e"
-path="res://.godot/imported/mago.png-604e2f20ab7175c5fccbeef337dba918.ctex"
+uid="uid://bt0hiv3rtjlfv"
+path="res://.godot/imported/FreeButtons.png-cd0beafc85cee0cd776130b8e9c49367.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/magardo/mago.png"
-dest_files=["res://.godot/imported/mago.png-604e2f20ab7175c5fccbeef337dba918.ctex"]
+source_file="res://Assets/FreeButtons.png/FreeButtons.png"
+dest_files=["res://.godot/imported/FreeButtons.png-cd0beafc85cee0cd776130b8e9c49367.ctex"]
 
 [params]
 

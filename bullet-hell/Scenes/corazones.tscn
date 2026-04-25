@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dydxcgg7cihlp"]
+
+[ext_resource type="Texture2D" uid="uid://cch1lbcmsi600" path="res://Assets/Hearts/Hearts/PNG/basic/background.png" id="1_dow8s"]
+[ext_resource type="Texture2D" uid="uid://5wlwm3q3idb4" path="res://Assets/Hearts/Hearts/PNG/basic/border.png" id="2_pj3a7"]
+[ext_resource type="Texture2D" uid="uid://7l6n8rr3gt5e" path="res://Assets/Hearts/Hearts/PNG/basic/heart.png" id="3_kpoxy"]
+
+[node name="UI" type="CanvasLayer" unique_id=103973160]
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=1977693234]
+position = Vector2(97.5, 56.5)
+texture = ExtResource("1_dow8s")
+
+[node name="borde" type="Sprite2D" parent="fondo" unique_id=1586917034]
+texture = ExtResource("2_pj3a7")
+
+[node name="corazon" type="Sprite2D" parent="fondo/borde" unique_id=1313341307]
+texture = ExtResource("3_kpoxy")
+
+[node name="fondo2" type="Sprite2D" parent="." unique_id=222314559]
+position = Vector2(79.5, 56.5)
+texture = ExtResource("1_dow8s")
+
+[node name="borde" type="Sprite2D" parent="fondo2" unique_id=229365641]
+texture = ExtResource("2_pj3a7")
+
+[node name="corazon2" type="Sprite2D" parent="fondo2/borde" unique_id=2094481558]
+texture = ExtResource("3_kpoxy")
+
+[node name="fondo3" type="Sprite2D" parent="." unique_id=1006979277]
+position = Vector2(61.5, 56.5)
+texture = ExtResource("1_dow8s")
+
+[node name="borde" type="Sprite2D" parent="fondo3" unique_id=821421643]
+texture = ExtResource("2_pj3a7")
+
+[node name="corazon3" type="Sprite2D" parent="fondo3/borde" unique_id=725079324]
+texture = ExtResource("3_kpoxy")

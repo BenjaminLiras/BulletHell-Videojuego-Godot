@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc5tykbo5k1xr"
-path="res://.godot/imported/mago2.png-32c8f021f6523bb381a62a88d656dd5f.ctex"
+uid="uid://j10r3k54xt4k"
+path="res://.godot/imported/heart_animated_2.png-63790f1f9a853940ee41f7fc0f566c15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/magardo/mago2.png"
-dest_files=["res://.godot/imported/mago2.png-32c8f021f6523bb381a62a88d656dd5f.ctex"]
+source_file="res://Assets/Hearts/Hearts/PNG/animated/no_border/heart_animated_2.png"
+dest_files=["res://.godot/imported/heart_animated_2.png-63790f1f9a853940ee41f7fc0f566c15.ctex"]
 
 [params]
 

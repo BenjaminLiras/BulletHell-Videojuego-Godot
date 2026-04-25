@@ -1,82 +1,26 @@
 [gd_scene format=3 uid="uid://05gm5r3ps35r"]
 
 [ext_resource type="Script" uid="uid://dd6igelx1v7q6" path="res://Scripts/bullet_rojo.gd" id="1_0fcn3"]
-[ext_resource type="Texture2D" uid="uid://dqlfxlj2fpmkf" path="res://Assets/Effect and FX Pixel All Free/Free/Part 1/16.png" id="2_0fcn3"]
+[ext_resource type="Texture2D" uid="uid://buoksfcks2tmu" path="res://Assets/Effect and FX Pixel All Free/Free/Part 1/03.png" id="2_0fcn3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fcn3"]
-size = Vector2(61, 62)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mt075"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ph16"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fingv"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vl1ba"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(192, 0, 64, 64)
+size = Vector2(65, 67)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nuhmg"]
 atlas = ExtResource("2_0fcn3")
-region = Rect2(256, 0, 64, 64)
+region = Rect2(256, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qtqyw"]
 atlas = ExtResource("2_0fcn3")
-region = Rect2(320, 0, 64, 64)
+region = Rect2(320, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b663p"]
 atlas = ExtResource("2_0fcn3")
-region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2chk8"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(448, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oudv3"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(512, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hf8qd"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(576, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ct7vc"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(640, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fn7y4"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(704, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yhtgx"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(768, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gkotm"]
-atlas = ExtResource("2_0fcn3")
-region = Rect2(832, 0, 64, 64)
+region = Rect2(384, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0v4g1"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mt075")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2ph16")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fingv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vl1ba")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nuhmg")
 }, {
@@ -85,31 +29,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b663p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2chk8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oudv3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hf8qd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ct7vc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fn7y4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yhtgx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gkotm")
 }],
 "loop": true,
 "name": &"disparo",
-"speed": 12.0
+"speed": 10.0
 }]
 
 [node name="Area2D" type="Area2D" unique_id=1501085428]
@@ -117,10 +40,13 @@ collision_layer = 2
 script = ExtResource("1_0fcn3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884386764]
-position = Vector2(-0.5, 0)
+position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_0fcn3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1206925214]
+scale = Vector2(1.1621969, 1.1621969)
 sprite_frames = SubResource("SpriteFrames_0v4g1")
 animation = &"disparo"
-frame_progress = 0.87440777
+frame_progress = 0.042064644
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

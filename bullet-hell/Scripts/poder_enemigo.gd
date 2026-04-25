@@ -8,12 +8,15 @@ func _physics_process(delta):
 		fire()
 
 func fire():
-	var bullet = bullet_path.instantiate()
-	bullet.dir = rotation
-	bullet.pos = global_position
-	bullet.rota = global_rotation
-	get_tree().current_scene.add_child(bullet)
 	sePuedeDisparar = false
+	
+	for i in range (4): #Uso pi para calcular los angulos i = 0 > derecha // i = 1 > abajo // i = 2 > izq // i = 3 > arriba
+		var bullet = bullet_path.instantiate()
+		bullet.dir = (PI / 2) * i
+		bullet.pos = global_position
+		bullet.rota = (PI / 2) * i
+		get_tree().current_scene.add_child(bullet)
+		
 	await get_tree().create_timer(1).timeout
 	sePuedeDisparar = true
 
