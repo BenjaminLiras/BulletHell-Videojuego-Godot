@@ -7,7 +7,8 @@
 [node name="UI" type="CanvasLayer" unique_id=103973160]
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=1977693234]
-position = Vector2(97.5, 56.5)
+position = Vector2(127.49999, 62.5)
+scale = Vector2(1.7058823, 1.7058823)
 texture = ExtResource("1_dow8s")
 
 [node name="borde" type="Sprite2D" parent="fondo" unique_id=1586917034]
@@ -17,7 +18,8 @@ texture = ExtResource("2_pj3a7")
 texture = ExtResource("3_kpoxy")
 
 [node name="fondo2" type="Sprite2D" parent="." unique_id=222314559]
-position = Vector2(79.5, 56.5)
+position = Vector2(94, 63)
+scale = Vector2(1.764706, 1.764706)
 texture = ExtResource("1_dow8s")
 
 [node name="borde" type="Sprite2D" parent="fondo2" unique_id=229365641]
@@ -27,7 +29,8 @@ texture = ExtResource("2_pj3a7")
 texture = ExtResource("3_kpoxy")
 
 [node name="fondo3" type="Sprite2D" parent="." unique_id=1006979277]
-position = Vector2(61.5, 56.5)
+position = Vector2(59.999992, 63)
+scale = Vector2(1.764706, 1.764706)
 texture = ExtResource("1_dow8s")
 
 [node name="borde" type="Sprite2D" parent="fondo3" unique_id=821421643]

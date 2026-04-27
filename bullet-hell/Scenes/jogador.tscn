@@ -218,7 +218,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j88hc"]
 radius = 20.0
-height = 54.0
+height = 44.0
 
 [node name="jogador" type="CharacterBody2D" unique_id=664031782]
 collision_mask = 4
@@ -231,6 +231,7 @@ sprite_frames = SubResource("SpriteFrames_tw2ln")
 animation = &"atack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2085589629]
+position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_j88hc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=937144652]

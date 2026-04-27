@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://d1yd2wfv4il2n"]
+[gd_scene format=3 uid="uid://fhaxav6kk8qy"]
 
-[ext_resource type="Script" uid="uid://yblh3lftx1xi" path="res://Scripts/bullets.gd" id="1_xjght"]
-[ext_resource type="Texture2D" uid="uid://ctmmih6d5gjwr" path="res://Assets/Sprites - Lasers Bullets #1 [66]v2.5/Laser Sprites/46.png" id="2_oduel"]
+[ext_resource type="Texture2D" uid="uid://ctmmih6d5gjwr" path="res://Assets/Sprites - Lasers Bullets #1 [66]v2.5/Laser Sprites/46.png" id="1_4w0jx"]
+[ext_resource type="Script" uid="uid://csoqthofht1bt" path="res://Scenes/bullet.gd" id="1_oduel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycag2"]
 size = Vector2(38, 6)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1388366871]
-collision_layer = 2
-collision_mask = 4
-script = ExtResource("1_xjght")
+[node name="Area2D" type="Area2D" unique_id=1918249090]
+script = ExtResource("1_oduel")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2137264585]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1073022087]
 position = Vector2(-1.9073486e-06, -1.9073486e-06)
 scale = Vector2(0.23790714, 0.23415492)
-texture = ExtResource("2_oduel")
+texture = ExtResource("1_4w0jx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19020800]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=217165250]
 position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_ycag2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

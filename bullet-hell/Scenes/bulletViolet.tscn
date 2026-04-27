@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://05gm5r3ps35r"]
 
-[ext_resource type="Script" uid="uid://dd6igelx1v7q6" path="res://Scripts/bullet_rojo.gd" id="1_0fcn3"]
-[ext_resource type="Texture2D" uid="uid://buoksfcks2tmu" path="res://Assets/Effect and FX Pixel All Free/Free/Part 1/03.png" id="2_0fcn3"]
+[ext_resource type="Script" uid="uid://dd6igelx1v7q6" path="res://Scripts/bullet_rojo.gd" id="1_l7r6j"]
+[ext_resource type="Texture2D" uid="uid://buoksfcks2tmu" path="res://Assets/Effect and FX Pixel All Free/Free/Part 1/03.png" id="2_clgbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fcn3"]
 size = Vector2(53, 54)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nuhmg"]
-atlas = ExtResource("2_0fcn3")
+atlas = ExtResource("2_clgbx")
 region = Rect2(256, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qtqyw"]
-atlas = ExtResource("2_0fcn3")
+atlas = ExtResource("2_clgbx")
 region = Rect2(320, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b663p"]
-atlas = ExtResource("2_0fcn3")
+atlas = ExtResource("2_clgbx")
 region = Rect2(384, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0v4g1"]
@@ -37,7 +37,7 @@ animations = [{
 
 [node name="Area2D" type="Area2D" unique_id=1501085428]
 collision_layer = 2
-script = ExtResource("1_0fcn3")
+script = ExtResource("1_l7r6j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884386764]
 position = Vector2(0.5, 0)

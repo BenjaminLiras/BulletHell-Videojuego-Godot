@@ -13,7 +13,6 @@ func _ready() -> void:
 	animated_sprite_2d = $AnimatedSprite2D
 
 func _process(delta: float) -> void:
-	print("recibir: ", recibir, " salud: ", salud)
 	recibir_daño()
 	restar_corazones()
 

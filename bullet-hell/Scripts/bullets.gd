@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var pos:Vector2
-var rota:float #rotacionn
+var rota:float #rotacion 
 var dir:float
 var speed = 2000;
 
