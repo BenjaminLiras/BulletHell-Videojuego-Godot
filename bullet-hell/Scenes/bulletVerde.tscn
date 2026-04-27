@@ -50,7 +50,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"disparo",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afqdr"]
@@ -64,7 +64,7 @@ script = ExtResource("1_afqdr")
 scale = Vector2(1.453125, 1.453125)
 sprite_frames = SubResource("SpriteFrames_lhd2e")
 animation = &"disparo"
-frame_progress = 0.96143544
+frame_progress = 0.48660246
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=539102202]
 position = Vector2(0.5, 0.5)
