@@ -3,7 +3,7 @@ extends Area2D
 var pos: Vector2
 var rota: float
 var dir: float
-var speed = 200
+var speed = 150
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready():
@@ -21,4 +21,6 @@ func _on_body_entered(body):
 		queue_free()
 	elif body.get_parent().has_method("recibir_daño"):
 		body.get_parent().recibir = true
+		queue_free()
+	if body.name == "TileMapLayer":
 		queue_free()

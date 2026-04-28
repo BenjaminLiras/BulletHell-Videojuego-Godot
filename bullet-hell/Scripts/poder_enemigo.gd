@@ -17,7 +17,7 @@ func fire():
 		bullet.rota = (PI / 2) * i
 		get_tree().current_scene.add_child(bullet)
 		
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	sePuedeDisparar = true
 
 func _ready() -> void:
