@@ -14,7 +14,8 @@ func _physics_process(delta: float) -> void:
 	global_position += movement * delta
 
 func _on_body_entered(body: Node2D) -> void:
-	print(body.name)
-	if body.name == "enemigo":
-		body.queue_free()
-		queue_free() 
+	if body.has_method("recibir_dano"):
+		body.recibir_dano()
+		queue_free()
+	if body.name == "TileMapLayer":
+		queue_free()
