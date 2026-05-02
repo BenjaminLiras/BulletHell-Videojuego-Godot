@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bn3jhummkgha7"]
+
+[ext_resource type="Script" uid="uid://bp1tok3o7mxpj" path="res://Scripts/bullet_rojo_jefe.gd" id="1_rld8s"]
+[ext_resource type="Texture2D" uid="uid://cxp00xtx2cvva" path="res://Assets/Effect and FX Pixel All Free/Free/Part 2/79.png" id="2_xd3de"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sftje"]
+radius = 23.086792
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt075"]
+atlas = ExtResource("2_xd3de")
+region = Rect2(192, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ph16"]
+atlas = ExtResource("2_xd3de")
+region = Rect2(256, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fingv"]
+atlas = ExtResource("2_xd3de")
+region = Rect2(320, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl1ba"]
+atlas = ExtResource("2_xd3de")
+region = Rect2(384, 448, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sftje"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mt075")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ph16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fingv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vl1ba")
+}],
+"loop": true,
+"name": &"disparo",
+"speed": 6.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=1422075724]
+collision_layer = 2
+collision_mask = 21
+script = ExtResource("1_rld8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578690541]
+shape = SubResource("CircleShape2D_sftje")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=981487102]
+position = Vector2(3.8146973e-06, 3.8146973e-06)
+scale = Vector2(1.6777343, 1.6777343)
+sprite_frames = SubResource("SpriteFrames_sftje")
+animation = &"disparo"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

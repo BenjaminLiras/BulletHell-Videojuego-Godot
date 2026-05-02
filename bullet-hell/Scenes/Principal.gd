@@ -3,7 +3,7 @@ extends Node2D
 @export var enemigo_mago: PackedScene
 @export var enemigo_mago_verde: PackedScene
 @export var enemigo_mago_rojo: PackedScene
-# @export var escena_jefe: PackedScene
+@export var escena_jefe: PackedScene
 
 var oleada_actual = 1
 var enemigos_vivos = 0
@@ -28,7 +28,7 @@ func iniciar_oleada():
 		spawnear(enemigo_mago, 3)
 	elif oleada_actual == 5:
 		print("¡Jefe final! (escena pendiente)")
-		# spawnear(escena_jefe, 1)
+		spawnear(escena_jefe, 1)
 
 func spawnear(escena: PackedScene, cantidad: int):
 	for i in cantidad:

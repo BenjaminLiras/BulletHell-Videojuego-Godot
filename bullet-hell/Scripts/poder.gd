@@ -17,7 +17,7 @@ func fire():
 		bullet.rota = global_rotation
 		get_parent().add_child(bullet)
 		sePuedeDisparar = false
-		await get_parent().get_tree().create_timer(0.3).timeout
+		await get_parent().get_tree().create_timer(0).timeout
 		sePuedeDisparar = true   
 
 

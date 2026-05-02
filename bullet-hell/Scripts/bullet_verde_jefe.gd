@@ -24,4 +24,3 @@ func _on_body_entered(body):
 		queue_free()
 	if body.name == "TileMapLayer":
 		queue_free()
-	

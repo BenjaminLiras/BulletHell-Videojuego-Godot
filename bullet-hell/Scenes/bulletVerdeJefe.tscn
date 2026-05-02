@@ -1,33 +1,36 @@
-[gd_scene format=3 uid="uid://cw6uf7nv3n0vg"]
+[gd_scene format=3 uid="uid://j8rulv7o4l0h"]
 
-[ext_resource type="Script" uid="uid://cq0vtyd7apmbn" path="res://Scenes/bullet_verde.gd" id="1_afqdr"]
-[ext_resource type="Texture2D" uid="uid://cafm04i8awl1" path="res://Assets/Effect and FX Pixel All Free/Free/Part 7/335.png" id="1_fttmx"]
+[ext_resource type="Script" uid="uid://7bd27ct8maqu" path="res://Scripts/bullet_verde_jefe.gd" id="1_uxngi"]
+[ext_resource type="Texture2D" uid="uid://cafm04i8awl1" path="res://Assets/Effect and FX Pixel All Free/Free/Part 7/335.png" id="2_rmmbt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3flby"]
+radius = 61.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afqdr"]
-atlas = ExtResource("1_fttmx")
+atlas = ExtResource("2_rmmbt")
 region = Rect2(64, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nr076"]
-atlas = ExtResource("1_fttmx")
+atlas = ExtResource("2_rmmbt")
 region = Rect2(128, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mytmv"]
-atlas = ExtResource("1_fttmx")
+atlas = ExtResource("2_rmmbt")
 region = Rect2(192, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52jqy"]
-atlas = ExtResource("1_fttmx")
+atlas = ExtResource("2_rmmbt")
 region = Rect2(256, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hvvp3"]
-atlas = ExtResource("1_fttmx")
+atlas = ExtResource("2_rmmbt")
 region = Rect2(320, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7g6hc"]
-atlas = ExtResource("1_fttmx")
+atlas = ExtResource("2_rmmbt")
 region = Rect2(384, 192, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lhd2e"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3flby"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -53,22 +56,18 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_afqdr"]
-radius = 18.506756
-
-[node name="Area2D" type="Area2D" unique_id=1974554669]
+[node name="Area2D" type="Area2D" unique_id=1464013853]
 collision_layer = 2
 collision_mask = 21
-script = ExtResource("1_afqdr")
+script = ExtResource("1_uxngi")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=664627956]
-scale = Vector2(1.453125, 1.453125)
-sprite_frames = SubResource("SpriteFrames_lhd2e")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805776359]
+shape = SubResource("CircleShape2D_3flby")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202519561]
+position = Vector2(3.8146973e-06, 3.8146973e-06)
+scale = Vector2(4.658203, 4.658203)
+sprite_frames = SubResource("SpriteFrames_3flby")
 animation = &"disparo"
-frame_progress = 0.48660246
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=539102202]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("CircleShape2D_afqdr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

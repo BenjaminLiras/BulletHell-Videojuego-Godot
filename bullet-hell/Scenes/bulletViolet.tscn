@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dd6igelx1v7q6" path="res://Scripts/bullet_rojo.gd" id="1_l7r6j"]
 [ext_resource type="Texture2D" uid="uid://buoksfcks2tmu" path="res://Assets/Effect and FX Pixel All Free/Free/Part 1/03.png" id="2_clgbx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fcn3"]
-size = Vector2(53, 54)
+[sub_resource type="CircleShape2D" id="CircleShape2D_l7r6j"]
+radius = 27.00463
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nuhmg"]
 atlas = ExtResource("2_clgbx")
@@ -41,8 +41,8 @@ collision_mask = 21
 script = ExtResource("1_l7r6j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884386764]
-position = Vector2(0.5, 0)
-shape = SubResource("RectangleShape2D_0fcn3")
+position = Vector2(0, 1.5)
+shape = SubResource("CircleShape2D_l7r6j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1206925214]
 scale = Vector2(1.1621969, 1.1621969)

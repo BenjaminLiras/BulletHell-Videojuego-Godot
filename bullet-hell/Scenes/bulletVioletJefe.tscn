@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d2vub1ap2dspu"]
+
+[ext_resource type="Script" uid="uid://mdm80wkkbdyp" path="res://Scripts/bullet_violet_jefe.gd" id="1_ksg4h"]
+[ext_resource type="Texture2D" uid="uid://buoksfcks2tmu" path="res://Assets/Effect and FX Pixel All Free/Free/Part 1/03.png" id="2_rqmok"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cmwx1"]
+radius = 62.03225
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuhmg"]
+atlas = ExtResource("2_rqmok")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtqyw"]
+atlas = ExtResource("2_rqmok")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b663p"]
+atlas = ExtResource("2_rqmok")
+region = Rect2(384, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmwx1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuhmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtqyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b663p")
+}],
+"loop": true,
+"name": &"disparo",
+"speed": 10.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=1319191161]
+collision_layer = 2
+collision_mask = 21
+script = ExtResource("1_ksg4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=166219791]
+shape = SubResource("CircleShape2D_cmwx1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=276932795]
+position = Vector2(-1, 0)
+scale = Vector2(2.6279733, 2.6279733)
+sprite_frames = SubResource("SpriteFrames_cmwx1")
+animation = &"disparo"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

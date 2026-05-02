@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://dr6sqen0vq7tr"]
+
+[ext_resource type="Script" uid="uid://bxl844y3scnek" path="res://Scripts/enemigo_final.gd" id="1_54t70"]
+[ext_resource type="Texture2D" uid="uid://cs1fjieshelh0" path="res://Assets/MagoVillano/wizardDeath.png" id="2_u6qou"]
+[ext_resource type="Texture2D" uid="uid://c14cmosjda2wt" path="res://Assets/MagoVillano/wizardWalk.png" id="4_ev78e"]
+[ext_resource type="Script" uid="uid://e27i3d366jnl" path="res://Scripts/poder_jefe.gd" id="5_54t70"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_800x7"]
+size = Vector2(74, 157)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1hdw"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(0, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rut6"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(110, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up4cl"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(220, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqoyo"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(330, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr0c2"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(440, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhnug"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(550, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfc3y"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(660, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cewj"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(770, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjh4b"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(880, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7qwt"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(990, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_800x7"]
+atlas = ExtResource("2_u6qou")
+region = Rect2(0, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovuhq"]
+atlas = ExtResource("4_ev78e")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjnoa"]
+atlas = ExtResource("4_ev78e")
+region = Rect2(640, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22jk5"]
+atlas = ExtResource("4_ev78e")
+region = Rect2(800, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_800x7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1hdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rut6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up4cl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqoyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr0c2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhnug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfc3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cewj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjh4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7qwt")
+}],
+"loop": true,
+"name": &"death",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_800x7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovuhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjnoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22jk5")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[node name="jefeFinal" type="CharacterBody2D" unique_id=62272234]
+collision_layer = 4
+collision_mask = 31
+script = ExtResource("1_54t70")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1756697875]
+position = Vector2(20, 22.5)
+shape = SubResource("RectangleShape2D_800x7")
+
+[node name="poderJefe" type="Node2D" parent="." unique_id=52914443]
+script = ExtResource("5_54t70")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2051187773]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(28.18164, 28.18164)
+scale = Vector2(1.8694246, 1.8694246)
+sprite_frames = SubResource("SpriteFrames_800x7")
+animation = &"idle"
+frame_progress = 0.34948528

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dydxcgg7cihlp" path="res://Scenes/corazones.tscn" id="5_1jxek"]
 [ext_resource type="PackedScene" uid="uid://cy1bqjcm0fd6t" path="res://Scenes/enemigo_mago_rojo.tscn" id="6_3tocd"]
 [ext_resource type="PackedScene" uid="uid://di6f570d62c0o" path="res://Scenes/enemigo_mago_verde.tscn" id="6_tmjc0"]
+[ext_resource type="PackedScene" uid="uid://dr6sqen0vq7tr" path="res://Scenes/enemigoFinal.tscn" id="8_ya7n8"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_tmjc0"]
 
@@ -1239,6 +1240,7 @@ script = ExtResource("1_3tocd")
 enemigo_mago = ExtResource("4_snmdh")
 enemigo_mago_verde = ExtResource("6_tmjc0")
 enemigo_mago_rojo = ExtResource("6_3tocd")
+escena_jefe = ExtResource("8_ya7n8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2138595539]
 modulate = Color(0, 0, 0, 1)
