@@ -1,6 +1,8 @@
 extends CharacterBody2D
 @export var jogador: Node2D
 
+signal murio
+
 const SPEED = 100
 var vida = 2
 
@@ -22,4 +24,5 @@ func _physics_process(delta: float) -> void:
 func recibir_dano():
 	vida -= 1
 	if vida <= 0:
+		emit_signal("murio")
 		queue_free()
