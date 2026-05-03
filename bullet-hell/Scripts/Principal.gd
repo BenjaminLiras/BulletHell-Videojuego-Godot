@@ -4,6 +4,7 @@ extends Node2D
 @export var enemigo_mago_verde: PackedScene
 @export var enemigo_mago_rojo: PackedScene
 @export var escena_jefe: PackedScene
+@onready var label_oleada = $UI/oleadas
 
 var oleada_actual = 1
 var enemigos_vivos = 0
@@ -12,7 +13,7 @@ func _ready():
 	iniciar_oleada()
 
 func iniciar_oleada():
-	print("Oleada: ", oleada_actual)
+	label_oleada.text = str(oleada_actual) + "/5"
 	
 	if oleada_actual == 1:
 		spawnear(enemigo_mago, 3)
@@ -27,6 +28,7 @@ func iniciar_oleada():
 		spawnear(enemigo_mago_verde, 3)
 		spawnear(enemigo_mago, 3)
 	elif oleada_actual == 5:
+		get_node("UI/barraJefe").visible = true
 		print("¡Jefe final! (escena pendiente)")
 		spawnear(escena_jefe, 1)
 
@@ -43,7 +45,7 @@ func _on_enemigo_murio():
 	if enemigos_vivos == 0:
 		oleada_actual += 1
 		if oleada_actual > 5:
-			print("¡Ganaste!")
+			get_tree().change_scene_to_file("res://Scenes/Victoria.tscn")
 		else:
 			await get_tree().create_timer(2.0).timeout
 			iniciar_oleada()

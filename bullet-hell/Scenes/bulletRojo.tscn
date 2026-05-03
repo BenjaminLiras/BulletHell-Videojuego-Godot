@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvtc5782hmqw7"]
 
-[ext_resource type="Script" uid="uid://681kstq8dw4c" path="res://Scenes/bullet_RojoV.gd" id="1_0fcn3"]
+[ext_resource type="Script" uid="uid://681kstq8dw4c" path="res://Scripts/bullet_RojoV.gd" id="1_0fcn3"]
 [ext_resource type="Texture2D" uid="uid://cxp00xtx2cvva" path="res://Assets/Effect and FX Pixel All Free/Free/Part 2/79.png" id="2_0fcn3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mt075"]

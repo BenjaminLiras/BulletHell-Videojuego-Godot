@@ -22,7 +22,7 @@ func recibir_daño():
 			salud -= 1
 			recibir = false
 	if salud <= 0:
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://Scenes/Derrota.tscn")
 
 func restar_corazones():
 	if salud == 3:

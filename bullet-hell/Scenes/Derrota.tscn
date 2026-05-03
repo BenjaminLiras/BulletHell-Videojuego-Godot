@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bltnd73tpda2m"]
+
+[ext_resource type="Texture2D" uid="uid://2c1pj60vmgnq" path="res://Assets/SATYR_sprite_sheet/fondo.svg" id="1_3qgis"]
+[ext_resource type="Script" uid="uid://cch7w0ixuxbeu" path="res://Scripts/derrota.gd" id="1_rfit0"]
+
+[node name="Control" type="Control" unique_id=287414049]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rfit0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=903639062]
+layout_mode = 0
+offset_right = 1169.0
+offset_bottom = 672.0
+texture = ExtResource("1_3qgis")
+
+[node name="Label" type="Label" parent="." unique_id=1297080327]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 859.0
+offset_top = 166.0
+offset_right = 996.0
+offset_bottom = 208.0
+theme_override_font_sizes/font_size = 30
+text = "DERROTA"
+
+[node name="Button" type="Button" parent="." unique_id=1295690999]
+modulate = Color(1, 0.13333334, 0.13333334, 1)
+layout_mode = 0
+offset_left = 879.0
+offset_top = 302.0
+offset_right = 996.9487
+offset_bottom = 348.0
+theme_override_font_sizes/font_size = 22
+text = "Reiniciar"
+
+[node name="Button2" type="Button" parent="." unique_id=479795736]
+modulate = Color(1, 0.4, 0, 1)
+layout_mode = 0
+offset_left = 834.0
+offset_top = 354.0
+offset_right = 1039.5385
+offset_bottom = 402.0
+theme_override_font_sizes/font_size = 22
+text = "Volver al menu"
+
+[node name="Label2" type="Label" parent="." unique_id=639609713]
+layout_mode = 0
+offset_left = 758.0
+offset_top = 236.0
+offset_right = 1129.0
+offset_bottom = 268.0
+text = "No lograste derrotar al imperio de las sombras :("
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

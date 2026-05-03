@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cp7cyyombqpyq"]
+
+[ext_resource type="Texture2D" uid="uid://2c1pj60vmgnq" path="res://Assets/SATYR_sprite_sheet/fondo.svg" id="1_6a0s3"]
+[ext_resource type="Script" uid="uid://ctwemkmflmjry" path="res://Scripts/victoria.gd" id="1_tpqw8"]
+
+[node name="Control" type="Control" unique_id=1768832165]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tpqw8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=626702200]
+layout_mode = 0
+offset_right = 1169.0
+offset_bottom = 669.0
+texture = ExtResource("1_6a0s3")
+
+[node name="Label" type="Label" parent="." unique_id=989611234]
+modulate = Color(0.28354064, 0.7386169, 3.85046e-07, 1)
+layout_mode = 0
+offset_left = 879.0
+offset_top = 155.0
+offset_right = 1015.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 30
+text = "VICTORIA"
+
+[node name="Label2" type="Label" parent="." unique_id=1872923767]
+layout_mode = 0
+offset_left = 763.0
+offset_top = 217.0
+offset_right = 1119.0
+offset_bottom = 266.0
+text = "Lograste derrotar al imperio de las sombras 
+bien hecho :D"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1586437798]
+modulate = Color(1, 0.13333334, 0.13333334, 1)
+layout_mode = 0
+offset_left = 860.0
+offset_top = 329.0
+offset_right = 1027.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 22
+text = "Volver al menu
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

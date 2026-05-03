@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cmp0pccgc0c6j"]
+
+[ext_resource type="Texture2D" uid="uid://2c1pj60vmgnq" path="res://Assets/SATYR_sprite_sheet/fondo.svg" id="1_6pedr"]
+[ext_resource type="Script" uid="uid://dtlad4kycibdv" path="res://Scripts/menu.gd" id="1_syfuq"]
+[ext_resource type="Texture2D" uid="uid://bpyr10u5egq1x" path="res://Assets/SATYR_sprite_sheet/SPRITE_PORTRAIT.png" id="2_syfuq"]
+
+[node name="Control" type="Control" unique_id=1813184991]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -469.0
+offset_bottom = -361.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_syfuq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=252656535]
+layout_mode = 0
+offset_right = 1166.0
+offset_bottom = 669.0
+texture = ExtResource("1_6pedr")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=997013074]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 468.0
+offset_right = 508.0
+offset_bottom = 591.0
+texture = ExtResource("2_syfuq")
+
+[node name="Button" type="Button" parent="." unique_id=1558304401]
+modulate = Color(1, 0.13333334, 0.13333334, 1)
+layout_mode = 0
+offset_left = 898.0
+offset_top = 208.0
+offset_right = 1017.2258
+offset_bottom = 264.0
+theme_override_font_sizes/font_size = 28
+text = "Jugar"
+
+[node name="Button2" type="Button" parent="." unique_id=164155106]
+modulate = Color(1, 0.4, 0, 1)
+layout_mode = 0
+offset_left = 898.0
+offset_top = 272.0
+offset_right = 1019.0
+offset_bottom = 335.0
+theme_override_font_sizes/font_size = 23
+text = "Controles"
+
+[node name="Button3" type="Button" parent="." unique_id=2147095151]
+modulate = Color(1, 0.13333334, 0.13333334, 1)
+layout_mode = 0
+offset_left = 898.0
+offset_top = 342.0
+offset_right = 1020.0
+offset_bottom = 406.0
+theme_override_font_sizes/font_size = 23
+text = "Salir"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

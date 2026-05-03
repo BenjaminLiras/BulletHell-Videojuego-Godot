@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cdixgxgcwnv2j"]
+
+[ext_resource type="Texture2D" uid="uid://2c1pj60vmgnq" path="res://Assets/SATYR_sprite_sheet/fondo.svg" id="1_23br4"]
+[ext_resource type="Script" uid="uid://cd5r8m2dqfmdc" path="res://Scripts/controles.gd" id="1_dwwl4"]
+[ext_resource type="Texture2D" uid="uid://bpyr10u5egq1x" path="res://Assets/SATYR_sprite_sheet/SPRITE_PORTRAIT.png" id="2_hdt5p"]
+
+[node name="Control" type="Control" unique_id=254952849]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dwwl4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1983599753]
+layout_mode = 0
+offset_right = 1168.0
+offset_bottom = 668.0
+texture = ExtResource("1_23br4")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1461033056]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 468.0
+offset_right = 508.0
+offset_bottom = 591.0
+texture = ExtResource("2_hdt5p")
+
+[node name="Label" type="Label" parent="." unique_id=500855507]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 855.0
+offset_top = 174.0
+offset_right = 995.0
+offset_bottom = 216.0
+theme_override_font_sizes/font_size = 30
+text = "Controles"
+
+[node name="Label2" type="Label" parent="." unique_id=1196038546]
+layout_mode = 0
+offset_left = 745.0
+offset_top = 265.0
+offset_right = 1111.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 22
+text = "-WASD - Movimiento del personaje
+
+-Espacio - Disparo del personaje
+
+-Click Izq - Disparo del personaje"
+
+[node name="Button" type="Button" parent="." unique_id=863723942]
+modulate = Color(1, 0.4, 0, 1)
+layout_mode = 0
+offset_left = 883.0
+offset_top = 470.0
+offset_right = 978.0
+offset_bottom = 509.0
+theme_override_font_sizes/font_size = 22
+text = "Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

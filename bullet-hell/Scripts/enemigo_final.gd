@@ -24,6 +24,8 @@ func _loop_teletransporte():
 
 func recibir_dano():
 	vida -= 1
+	var barra = get_node("/root/Node2D/UI/barraJefe")
+	barra.value = vida
 	if vida <= 0:
 		emit_signal("murio")
 		queue_free()

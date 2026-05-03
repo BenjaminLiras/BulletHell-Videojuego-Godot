@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw6uf7nv3n0vg"]
 
-[ext_resource type="Script" uid="uid://cq0vtyd7apmbn" path="res://Scenes/bullet_verde.gd" id="1_afqdr"]
+[ext_resource type="Script" uid="uid://cq0vtyd7apmbn" path="res://Scripts/bullet_verde.gd" id="1_afqdr"]
 [ext_resource type="Texture2D" uid="uid://cafm04i8awl1" path="res://Assets/Effect and FX Pixel All Free/Free/Part 7/335.png" id="1_fttmx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afqdr"]
